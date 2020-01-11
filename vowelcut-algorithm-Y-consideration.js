@@ -4,13 +4,13 @@ const zeroLengthStringMessage = "Please write a string 1 or more characters long
 
 function hasVowels(string){
     let word = string.toLowerCase()
-	if(word === "a" || word === "e" || word === "i" || word === "o" || word === "u" || word === "y"){
-        return true
-	} else if(/[aeiou]/.test(string)){
+	if(/[aeiou]/.test(word)){
 		return true
-	} else if (string.includes("y") && YIsAVowel(string)){
+	} else if (word.includes("y") && YIsAVowel(word)){
 		return true
-	}
+	} else {
+        return false
+    }
 }
 
 function cutEndPunc(string){
