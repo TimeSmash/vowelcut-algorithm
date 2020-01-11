@@ -23,12 +23,9 @@ function vowelCut(string){
 	if (isAValidString(string) === notAStringMessage || isAValidString(string) === zeroLengthStringMessage || isAValidString(string) === noLetterString){ return isAValidString(string)}
 
 	if (string.length == 1){
-
 		if(hasVowels(string)){
-
 			return ""
         } else {
-
 			return string
 		}
 	}
