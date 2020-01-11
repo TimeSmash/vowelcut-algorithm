@@ -33,13 +33,13 @@ Accents/diacritical marks, such as the acute e (é) and cicrumflex () are not co
 
 Y is considered a vowel in all instances in which it appears. I originally opted to try and account for Y counting as a vowel or not using Merriam-Webster's guidelines[1]:
 
-*Y is considered to be a vowel if…*
-
-*The word has no other vowel: gym, my.*
-
-*The letter is at the end of a word or syllable: candy, deny, bicycle, acrylic.*
-
-*The letter is in the middle of a syllable: system, borborygmus.*
+>Y is considered to be a vowel if…*
+   
+   >The word has no other vowel: gym, my.*
+   
+   >The letter is at the end of a word or syllable: candy, deny, bicycle, acrylic.*
+   
+   >The letter is in the middle of a syllable: system, borborygmus.*
 
 but defining what is and what is not a syllable is beyond the scope of a simple algorithm such as this. Eliminating syllables from the equation results in the only rule remaining, along the lines of "y is considered a vowel is it is the only vowel in the word, or is at the end of the word." 
 
