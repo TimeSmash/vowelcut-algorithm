@@ -35,32 +35,27 @@ function vowelCut(string){
 	//Alternatively could do [zeroLengthStringMessage,noLetterString,notAStringMessage].includes(isAValidString("!"))
     //For readability, could create another helper function that uses this code 
 
-    //Valid string. First check its length
-	if (string.length == 1){
-		//check if letter is a vowel
-		if(hasVowels(string)){
+    //Valid string. First check if it has vowels
+
+	if (hasVowels(string)){
+		if(string.length == 1){
 		//if it is return empty string (AEIOUY as single chars counted as vowels, so cut and return empty string
 			return ""
-        } else {
-		//If it is not just return the character
-			return string
-		}
-	}
-	
-	// string must be >> length 1
-	
-	//Split string so it's a sequence of characters (ex. "Well hi!" => ["W","e","l","l"," ","h","i","!"])
-	let characterArray = string.split("")
-	//Return a new array by subjecting each character to a function via map
-	//Function: If the character is a vowel (lowercase or caps), convert it to a "" (if not leave as is)
-	return characterArray.map(character => {
-		if(/[aeiouyAEIOUY]/.test(character)){
-			character => character.replace(/[aeiouyAEIOUY]/, "")
-		} else {return character}
-    //Now join the strings together using empty strings as the delimiter
-    //This means any empty strings are removed from the array, and the conseqeunting array is joined into a new string
-	//ex. "Well hi!" -> ["W"," ", "l", "l", " ", "h", " ", "!"] joins to become "Wll h!"
-	}).join("")
+        } else {	
+        // string must be >> length 1
+        
+        //Split string so it's a sequence of characters (ex. "Well hi!" => ["W","e","l","l"," ","h","i","!"])
+        let characterArray = string.split("")
+        //Return a new array by subjecting each character to a function via map
+        //Function: If the character is a vowel (lowercase or caps), convert it to a "" (if not leave as is)
+        return characterArray.map(character => {
+            if(/[aeiouyAEIOUY]/.test(character)){
+                character => character.replace(/[aeiouyAEIOUY]/, "")
+            } else {return character}
+        //Now join the strings together using empty strings as the delimiter
+        //This means any empty strings are removed from the array, and the conseqeunting array is joined into a new string
+        //ex. "Well hi!" -> ["W"," ", "l", "l", " ", "h", " ", "!"] joins to become "Wll h!"
+        }).join("")
+        } 
+    } else {return string}
 }
-
-

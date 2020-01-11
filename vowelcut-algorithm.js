@@ -23,21 +23,18 @@ function isAValidString(string){
 
 function vowelCut(string){
 	if (isAValidString(string) === notAStringMessage || isAValidString(string) === zeroLengthStringMessage || isAValidString(string) === noLetterString){ return isAValidString(string)}
-
-	if (string.length == 1){
-		if(hasVowels(string)){
-			return ""
-        } else {
-			return string
-		}
-	}
-	
-	let characterArray = string.split("")
-
-	return characterArray.map(character => {
-		if(/[aeiouyAEIOUY]/.test(character)){
-			character => character.replace(/[aeiouyAEIOUY]/, "")
-		} else {return character}
-	}).join("")
+  	if (hasVowels(string)){  
+		if(string.length == 1){  
+  
+			return ""  
+        } else {	 
+        let characterArray = string.split("") 
+       return characterArray.map(character => {
+            if(/[aeiouyAEIOUY]/.test(character)){
+                character => character.replace(/[aeiouyAEIOUY]/, "")
+            } else {return character}
+        }).join("")
+        } 
+    } else {return string}
 }
 
