@@ -4,11 +4,8 @@ const zeroLengthStringMessage = "Please write a string 1 or more characters long
 
 function hasVowels(string){
     let word = string.toLowerCase()
-    //account for single character strings
-	if(word === "a" || word === "e" || word === "i" || word === "o" || word === "u" || word === "y"){
-        return true
-    //If string.length >1 look for vowels in string using regex 
-	} else if(/[aeiouy]/.test(string)){
+    //If string has vowel in it return true
+    if(/[aeiouy]/.test(word)){
         return true
     //String is not a,e,i,o,u nor does it contain those vowels, so return false
 	} else {
