@@ -1,3 +1,7 @@
+const notAStringMessage = "Not a string go away."
+const noLetterString = "Please write a string that has letters in it."
+const zeroLengthStringMessage = "Please write a string 1 or more characters long."
+
 function hasVowels(string){
     let word = string.toLowerCase()
     //account for single character strings
