@@ -1,3 +1,7 @@
+const notAStringMessage = "Not a string go away."
+const noLetterString = "Please write a string that has letters in it."
+const zeroLengthStringMessage = "Please write a string 1 or more characters long."
+
 function hasVowels(string){
     let word = string.toLowerCase()
 	if(word === "a" || word === "e" || word === "i" || word === "o" || word === "u" || word === "y"){
@@ -49,9 +53,6 @@ function isAValidString(string){
 }
 
 function vowelCut(string){
-	let noLetterString = "Please write a string that has letters in it."
-	let zeroLengthStringMessage = "Please write a string 1 or more characters long."
-	let notAStringMessage = "Not a string go away."
 	if (isAValidString(string) === notAStringMessage || isAValidString(string) === zeroLengthStringMessage || isAValidString(string) === noLetterString){ return isAValidString(string)}
 
 	//First check 1chr strings == vowel
