@@ -39,4 +39,3 @@ function vowelCut(string){
 	}).join("")
 }
 
-
