@@ -56,6 +56,11 @@ function vowelCut(string){
         //This means any empty strings are removed from the array, and the conseqeunting array is joined into a new string
         //ex. "Well hi!" -> ["W"," ", "l", "l", " ", "h", " ", "!"] joins to become "Wll h!"
         }).join("")
+
+        // Accounting for extra spaces--if you're a Medium reader, ignore this as I'm not sure this code would work correctly.
+        // At end of .join("")
+        // .split(" ").filter(char => char!=="").join(" ")
+
         } 
     } else {return string}
 }

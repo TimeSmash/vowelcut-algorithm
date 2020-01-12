@@ -25,7 +25,6 @@ function vowelCut(string){
 	if (isAValidString(string) === notAStringMessage || isAValidString(string) === zeroLengthStringMessage || isAValidString(string) === noLetterString){ return isAValidString(string)}
   	if (hasVowels(string)){  
 		if(string.length == 1){  
-  
 			return ""  
         } else {	 
         let characterArray = string.split("") 
@@ -33,7 +32,10 @@ function vowelCut(string){
             if(/[aeiouyAEIOUY]/.test(character)){
                 character => character.replace(/[aeiouyAEIOUY]/, "")
             } else {return character}
-        }).join("")
+		}).join("")
+		// Accounting for extra spaces--if you're a Medium reader, ignore this as I'm not sure this code would work correctly.
+        // At end of .join("")
+        // .split(" ").filter(char => char!=="").join(" ")
         } 
     } else {return string}
 }
