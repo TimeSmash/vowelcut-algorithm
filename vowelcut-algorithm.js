@@ -30,7 +30,7 @@ function vowelCut(string){
         let characterArray = string.split("") 
        return characterArray.map(character => {
             if(/[aeiouyAEIOUY]/.test(character)){
-                character => character.replace(/[aeiouyAEIOUY]/, "")
+                character = ""
             } else {return character}
 		}).join("")
 		// Accounting for extra spaces--if you're a Medium reader, ignore this as I'm not sure this code would work correctly.

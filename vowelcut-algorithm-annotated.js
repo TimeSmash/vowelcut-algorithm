@@ -50,7 +50,7 @@ function vowelCut(string){
         //Function: If the character is a vowel (lowercase or caps), convert it to a "" (if not leave as is)
         return characterArray.map(character => {
             if(/[aeiouyAEIOUY]/.test(character)){
-                character => character.replace(/[aeiouyAEIOUY]/, "")
+                character = ""
             } else {return character}
         //Now join the strings together using empty strings as the delimiter
         //This means any empty strings are removed from the array, and the conseqeunting array is joined into a new string

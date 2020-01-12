@@ -15,7 +15,7 @@ function hasVowels(string){
 
 function cutEndPunc(string){
 	//look for a bunch of special characters at the end of a string
-	let punctuation = /[.,\/'"#@[!$%\^&\*;\]:{}=\-_`~()\+\?]/
+	let punctuation = /[.,\/'"#@[!$%\^&\*;\]:{}=\-_`~()\+\?\d]/
 	
 	if (punctuation.test(string.charAt(string.length-1))){
 		// if last char in the string is punctuation remove the last punctuation 
@@ -26,9 +26,29 @@ function cutEndPunc(string){
 	return string
 }
 
+//Leave this commented out! 
+//This is the composition of YIsAVowel BEFORE incorporating cutEndPunc
+
+// function YIsAVowel(string){
+//     //First let's lowercase the string so it's easier to check out
+//     let stringLowercase = string.toLowerCase()
+// 	if(stringLowercase.charAt(stringLowercase.length-1) === "y") {
+// 		//stringLowercase/word ends in Y means Y is a vowel
+// 		//This also accounts for a stringLowercase of just Y
+// 		return true
+// 	} else if(!/[aeiou]/.test(stringLowercase) && stringLowercase.includes("y")) {
+// 		//If stringLowercase/word has no other vowels and Y is present, Y is a vowel
+// 		return true
+//     } else {
+// 		//stringLowercase does not end in Y, and has other vowels bicycle symphony yams
+// 		return false
+// 	}
+// }
+
+
 function YIsAVowel(string){
 	//First let's cut all punctuation off end of string
-	let stringWithNoEndPunc = cutEndPunc(string)
+	let stringWithNoEndPunc = cutEndPunc(string.toLowerCase())
 	if(stringWithNoEndPunc.charAt(stringWithNoEndPunc.length-1) === "y") {
 		//stringWithNoEndPunc/word ends in Y means Y is a vowel
 		//This also accounts for a stringWithNoEndPunc of just Y
