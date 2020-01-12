@@ -97,12 +97,10 @@ function vowelCut(string){
 	//Return new string where all Ys present are NOT vowels
 	let stringWithYAsVowelRemoved = wordArray.map(word => {
 		//see if each word has Y as a letter
-// 	console.log(word, "Y is in the word: " + /[yY]/.test(word))
 	//If Y is in the word, determine if it is a vowel
-// 	console.log(YIsAVowel(word))
 		if (/[yY]/.test(word)){
 			if (YIsAVowel(word)){
-				console.log("Y is a vowel, excising.")
+				// console.log("Y is a vowel, excising.")
 				return word.replace(/[yY]/, "")
 			} else {return word}
 		} else {return word}
@@ -112,7 +110,7 @@ function vowelCut(string){
 
 	return characterArray.map(character => {
 		if(/[aeiouAEIOU]/.test(character)){
-			character => character.replace(/[aeiouAEIOU]/, "")
+			character = ""
 		} else {return character}
 	}).join("")
 }
