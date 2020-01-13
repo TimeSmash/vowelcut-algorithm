@@ -1,3 +1,18 @@
+//Medium Readers: You'll notice a lot more comments here than in the article. They pretty much reiterate what the article says or help visualize certain activity.
+
+// Endpoints
+// -Make sure string used for argument in the first place, otherwise error message 
+
+// -If string.length === 0 return error message
+
+// -If string does not contain any alphabetical characters return error message
+
+// -Return “” if the string is A E I O U or Y
+
+// -Return the same string if that string.length === 1 && is not a vowel
+
+// -Take a string like “Princess Peach is the best.” and return it as “Prncss Pch s th bst.” Meaning that case must be preserved.
+
 const notAStringMessage = "Not a string. Please provide an argument that is a string."
 const noLetterString = "Please write a string that has letters in it."
 const zeroLengthStringMessage = "Please write a string 1 or more characters long."
@@ -42,7 +57,7 @@ function cutEndPunc(string){
 // 		//If stringLowercase/word has no other vowels and Y is present, Y is a vowel
 // 		return true
 //     } else {
-// 		//stringLowercase does not end in Y, and has other vowels bicycle symphony yams
+// 		//stringLowercase does not end in Y, and has other vowels 
 // 		return false
 // 	}
 // }
@@ -77,16 +92,13 @@ function isAValidString(string){
 function vowelCut(string){
 	if (isAValidString(string) === notAStringMessage || isAValidString(string) === zeroLengthStringMessage || isAValidString(string) === noLetterString){ return isAValidString(string)}
 
-	//First check 1chr strings == vowel
 	if (string.length == 1){
 		if(hasVowels(string)){
 			return ""
         } else {
 			return string
 		}
-		//Now check >1 strings for vowels
 	} else if(!hasVowels(string)){
-		//No vowels return string
 		return string
 	}
 	
