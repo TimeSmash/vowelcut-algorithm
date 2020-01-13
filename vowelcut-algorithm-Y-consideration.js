@@ -14,7 +14,9 @@ function hasVowels(string){
 }
 
 function cutEndPunc(string){
-	//look for a bunch of special characters at the end of a string
+    //look for a bunch of special characters at the end of a string
+    // Medium readers: There's a MUCH simpler regex we can use here
+    // Hint: You might possibly use the $ character. Remember character classes also be used for exclusionary reasons.
 	let punctuation = /[.,\/'"#@[!$%\^&\*;\]:{}=\-_`~()\+\?\d]/
 	
 	if (punctuation.test(string.charAt(string.length-1))){
