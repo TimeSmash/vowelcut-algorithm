@@ -1,4 +1,4 @@
-const notAStringMessage = "Not a string go away."
+const notAStringMessage = "Not a string. Please provide an argument that is a string."
 const noLetterString = "Please write a string that has letters in it."
 const zeroLengthStringMessage = "Please write a string 1 or more characters long."
 
